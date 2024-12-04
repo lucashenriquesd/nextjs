@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+
+  node:
+    container_name: nextjs-node
+    build:
+      context: ./
+      dockerfile: local.node.Dockerfile
+    tty: true
+    ports:
+      - "${NODE_PORT}:3000"
+      - "${NODE_DEBUG_PORT}:9229"
+    working_dir: /app
+    volumes:
+      - ./:/app
+    networks:
+      - nextjs-network
+
+networks:
+  nextjs-network:
+    driver: bridge
+    name: nextjs-network
