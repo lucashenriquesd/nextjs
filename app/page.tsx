@@ -13,7 +13,9 @@ import {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <TopMenu />
+      <header className="flex">
+        <TopMenu />
+      </header>
       <main className="flex flex-col gap-8 items-center">
         <Banner />
         <Card>
