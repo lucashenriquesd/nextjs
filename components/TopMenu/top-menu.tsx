@@ -10,7 +10,7 @@ import {
 
 export default function TopMenu() {
   return (
-    <header className="flex sticky top-0 w-full justify-center items-center h-11">
+    <header className="flex sticky top-0 z-50 w-full justify-center items-center h-11 bg-[#0c0a09]">
       <div className="flex justify-center items-center min-w-80">
         <NavigationMenu>
           <NavigationMenuList>
